@@ -494,45 +494,112 @@ header
   +clr
   padding-bottom: 80px
   padding-top: 45px
+  clear: both
+
   h2
     margin-bottom: 35px
     text-align: center
+    font-size: 36px
+    color: #1e5078
+    +mc
+    text-transform: uppercase
   .reviews_in
     @extend %in
+    width: 1055px
     +clr
   .review__item
-    +background-clip(padding-box)
-    width: 300px
     position: relative
     display: inline-block
-    margin-right: 30px
+    margin-right: 41px
+    &.last
+      margin-right: 0
+    .review__person
+      margin-top: 15px
+      margin-left: -15px
+      i
+        display: inline-block
+        background: url(../img/name.png) center center no-repeat
+        width: 24px
+        height: 22px
+        margin-right: 12px
+        vertical-align: middle
+      h3
+        color: #5a960a
+        font-size: 18px
+        font-family: 'conv_pfdintextcondpro-light'
+        text-transform: none
+        font-weight: normal
+        display: inline-block
+        vertical-align: middle
+  .review__in
+    +background-clip(padding-box)
+    width: 320px
+
     +border-radius(8px)
     +background-clip(padding-box)
-    padding: 18px
+    padding: 18px 24px
     +box
     +clr
-    background: #f5ebd1
-    @include box-shadow(inset 0 -2px 0 rgba(0, 0, 0, .1))
-    &:last-child
-      margin-right: 0
-    &:after
-      position: absolute
-      content: ""
-      bottom: -40px
-      left: 20px
-      +s(review_popup)
+    background: transparent
+    border: rgb(210,230,240) solid 2px
+    +transform(skew(-15deg))
 
-    h3
-      color: #3c3c3c
-      font-size: 18px
-      font-family: 'conv_pfdintextcondpro-light'
-      text-transform: uppercase
-      margin-bottom: 10px
-      font-weight: normal
     p
       +pfl
       color: #3c3c3c
       font-size: 16px
+      +transform(skew(15deg))
+      margin-left: 10px
+
+  .review__buttons
+    clear: both
+    +clr
+    width: 460px
+    text-align: center
+    margin: 45px auto 0
+    %r-buttons
+      display: inline-block
+      width: 180px
+      height: 50px
+      +border-radius(4px)
+      +background-clip(padding-box)
+      color: #326414
+      font-size: 18px
+      text-decoration: none
+      +box
+      padding-top: 15px
+      text-transform: uppercase
+      font-family: 'conv_pfdintextcondpro-light'
+      +box-shadow(inset 0 -2px 0 rgba(70,130,10,.25))
+      +background-image(linear-gradient(to bottom, #e5ffc7 0%, #c7ff81 35.99%, #59bd09 100%))
+
+      &:hover
+        text-decoration: underline
+    .review__more-reviews
+      @extend %r-buttons
+      i
+        display: inline-block
+        +s(more-reviews_ico)
+        vertical-align: middle
+        position: relative
+        top: -3px
+        left: -12px
+      &:hover
+        +background-image(linear-gradient(to bottom, #59bd09 0%, #c7ff81 65.99%, #e5ffc7 100%))
+
+    .review__add-review
+      @extend %r-buttons
+      position: relative
+      top: -1px
+      padding-top: 14px
+      margin-left: 20px
+      color: #ffffff
+      border: none
+      +box-shadow(inset 0 -2px 0 rgba(60,160,210,.4))
+      +background-image(linear-gradient(to bottom, #45bdff 0%, #3b9fd1 100%))
+
+      &:hover
+        background: lighten(#45bdff, 10%)
 
 .order
 
