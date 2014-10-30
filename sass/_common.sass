@@ -1,0 +1,301 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+
+//body
+//  font-family: Arial, sans-serif
+//  font-size: 12px
+//  line-height: 1.4
+=pfl
+  font-family: "Conv_PFDinTextCondPro-Light"
+  font-weight: normal
+  font-style: normal
+=mc
+  font-family: 'conv_magistralc'
+  font-weight: normal
+  font-style: normal
+=mcb
+  font-family: 'conv_magistralc-bold'
+  font-weight: normal
+  font-style: normal
+
+input.error, textarea.error
+  box-shadow: inset 0 0 10px red !important
+label.error
+  display: none !important
+
+
+.icon
+  display: inline-block
+  position: relative
+
+body
+  font-size: 18px
+  line-height: 1.4
+  background: #fff
+  color: #1e1e1e
+  +pfl
+.out
+  position: relative
+input, textarea
+  +placeholder
+    font-size: 16px
+    color: #5a5a5a
+    +pfl
+%in
+  max-width: 1200px
+  width: 1000px
+  margin-left: auto
+  margin-right: auto
+
+.myFancyClose
+  position: absolute
+  top: -17px
+  right: -18px
+
+.btn
+  display: inline-block
+  +border-radius(16px)
+  +background-clip(padding-box)
+  padding: 8px 25px
+  color: #504b41
+  font-size: 18px
+  border: solid 2px #ffffff
+  text-decoration: underline
+  +transition(background, .5s)
+  &:hover
+    color: #504b41
+    background-color: lighten(white, 10%)
+.title
+  font-size: 48px
+  font-family: 'conv_pfdintextcondpro-xthinital'
+  line-height: 1em
+  color: #5a3c28
+  text-transform: uppercase
+  font-weight: normal
+  position: relative
+  text-align: center
+  span
+    font-size: 48px
+
+
+.counter
+  width: 230px
+  text-align: center
+  display: block
+  margin: -5px auto 15px
+  @include border-radius(8px)
+  @include background-clip(padding-box)
+  background-color: #0f3b5f
+  padding: 5px 0
+  p
+    color: #8cbee6
+    margin-bottom: 5px
+    margin-top: 1px
+    font-size: 16px
+    position: absolute
+    top: 83px
+    left: 50%
+    +transform(translateX(-50%))
+    font-family: 'conv_pfdintextcondpro-light'
+    &.counter__title
+      font-family: 'philosopheritalic'
+      font-size: 18px
+
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: inline-block
+
+    li
+      float: left
+      margin: 0 3px
+      text-align: center
+      position: relative
+
+      span
+        position: relative
+        background: none
+        +text-shadow(1px 1px 1px #ccc)
+        display: block
+        font-size: 48px
+        width: 70px
+        height: 80px
+        +box
+        padding-top: 7px
+        padding-right: 2px
+        font-family: 'conv_pfdintextcondpro-medium'
+        color: #373737
+        +background-image(linear-gradient(to bottom, #fff 0%, #fff 20%, #777 50%, #dbdbdb 70.15%, #595959 100%))
+        &.first
+          +border-radius(4px 0 0 4px)
+        &.last
+          +border-radius(0 4px 4px 0)
+        &:after
+          height: 3px
+          width: 100%
+          position: absolute
+          content: ""
+          +opacity(.4)
+          +background(linear-gradient(to bottom, rgba(255,255,255,0) 0%,#000  100%))
+          top: 38px
+          left: 0
+
+
+
+
+.form__out
+
+.form
+  width: 340px
+  //height: 510px
+  position: relative
+  +box
+  @include border-radius(8px)
+  @include background-clip(padding-box)
+  @include background-image(linear-gradient(to bottom, #09314f 0%,rgba(40,120,170,.8)  100%))
+
+
+  .caption
+    box-sizing: border-box
+    padding: 20px 30px
+    text-align: center
+
+    h3
+      font-size: 26px
+      text-align: center
+      +mcb
+      color: #ffffff
+      text-transform: none
+      line-height: 1em
+    h4
+      margin: 18px 0
+      font-size: 24px
+      text-align: center
+      color: #ffffff
+      line-height: 1em
+      +mc
+    .price
+      background: url(../img/price_bg.png) center no-repeat
+      width: 180px
+      height: 90px
+      font-size: 48px
+      color: #ffffff
+      text-align: center
+      display: inline-block
+      padding-top: 5px
+      +box
+      font-family: 'conv_pfdintextcondpro-medium'
+      span
+        font-family: 'conv_pfdintextcondpro-thin'
+        font-size: 36px
+
+.frm
+  padding-top: 10px
+  padding-bottom: 10px
+  position: relative
+  //box-sizing: border-box
+  +box
+
+
+
+form
+  margin-top: 30px
+  position: relative
+  input
+    padding-left: 47px
+    width: 280px
+    height: 50px
+    display: block
+    margin: 10px auto
+    +box
+    font-size: 18px
+    color: #000
+    +border-radius(4px)
+    +background-clip(padding-box)
+    background: #fff
+    &.name
+      background: #fff url(../img/name.png) no-repeat 9px 13px
+    &.phone
+      background: #fff url(../img/phone.png) no-repeat 9px 13px
+
+
+
+
+.button
+  +box
+  background: url(../img/button_bg.png) no-repeat
+  width: 220px
+  height: 75px
+  color: #ffffff
+  +single-text-shadow
+  display: block
+  margin: 20px auto auto
+  +mcb
+  font-size: 24px
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: 1px
+
+  &:hover
+    background: url(../img/button_bg-hover.png) no-repeat
+
+.form__bottom
+  text-align: center
+  margin-top: 15px
+  h5
+    font-size: 24px
+    color: #ffffff
+    +mc
+  h4
+    color: #ffffff
+    +pfl
+    font-size: 18px
