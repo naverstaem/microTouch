@@ -165,8 +165,8 @@ header
               top: -65px
               left: 90px
           &.figure4
-            top: 325px
-            left: 275px
+            top: 330px
+            left: 280px
             &:before
               background: url(../img/fig4.png) no-repeat
               width: 108px
@@ -197,13 +197,13 @@ header
               left: -140px
           &.figure7
             top: -40px
-            left: 400px
+            left: 380px
             &:before
               background: url(../img/brush.png) no-repeat
               width: 100px
               height: 135px
               top: 38px
-              left: -72px
+              left: -57px
           .figure-h3
             font-family: 'conv_pfdintextcondpro-regular'
             color: #1e5078
@@ -231,6 +231,13 @@ header
       float: right
       z-index: 1
       +clr
+      .award
+        position: absolute
+        top: -117px
+        right: -12px
+        z-index: 1
+        img
+          display: block
 
 .scrollMenu
   //@extend header
@@ -251,6 +258,237 @@ header
     height: 0
 
 .specs
+  +clr
+  margin-top: 130px
+  .specs_in
+    @extend %in
+    width: 1020px
+    +clr
+  .specs__left
+    float: left
+    width: 570px
+    padding-left: 20px
+  .specs__caption
+    position: relative
+    +border-radius(8px)
+    +background-clip(padding-box)
+    +background-image(linear-gradient(to left, #09314f 0%, #2777a9 100%))
+    text-align: center
+    padding: 20px 0
+    &:after
+      position: absolute
+      content: ""
+      +s(specs-caption_arrow)
+      bottom: -18px
+      left: 50%
+      +transform(translateX(-50%))
+    h2
+      +mcb
+      font-size: 40px
+      color: #ffffff
+      line-height: 1em
+    h3
+      font-size: 24px
+      color: #ffffff
+      font-weight: normal
+      font-family: 'conv_pfdintextcondpro-bold'
+      line-height: 1em
+  .specs__items
+    text-align: center
+    margin-top: 66px
+    .row
+      display: inline-block
+      position: relative
+      margin-bottom: 35px
+  .specs__item
+    display: inline-block
+    width: 120px
+    vertical-align: top
+    margin: 0 32px
+    .item__img
+      width: 100px
+      height: 100px
+      margin-bottom: 10px
+      display: inline-block
+      img
+        display: block
+        width: 100%
+        +border-radius(50%)
+    p
+      +pfl
+      font-size: 16px
+      span
+        font-family: 'conv_pfdintextcondpro-bold'
+  .specs__right
+    float: right
+    +clr
+    margin-top: -50px
+    width: 340px
+    .specs__video
+      position: relative
+      img
+        display: block
+      &:before
+        position: absolute
+        content: ""
+        top: 0
+        left: 0
+        background: url(../img/video-border.png) no-repeat
+        width: 340px
+        height: 230px
+      &:after
+        position: absolute
+        content: ""
+        +s(play)
+        top: 50%
+        left: 50%
+        +transform(translate(-50%,-50%))
+      &:hover
+        +opacity(.9)
+      .adv
+        position: absolute
+        background: url(../img/adv_bg.png) no-repeat
+        width: 121px
+        height: 111px
+        top: -25px
+        left: -55px
+        +pfl
+        font-size: 16px
+        text-align: center
+        line-height: 1em
+        color: #ffffff
+        padding-top: 17px
+        p
+          font-size: 48px
+          font-family: 'conv_pfdintextcondpro-bold'
+          margin-top: 14px
+    .specs__complect
+      padding-left: 20px
+      margin-top: 25px
+      h3
+        +mc
+        font-size: 24px
+        text-transform: uppercase
+      ul
+        margin: 8px 0
+        li
+          position: relative
+          margin-left: 16px
+          &:before
+            position: absolute
+            content: ""
+            +s(check_ico)
+            top: 7px
+            left: -16px
+      h4
+        font-family: 'conv_pfdintextcondpro-italic'
+        font-size: 16px
+        color: #5a960a
+        font-weight: normal
+    .specs__review
+      margin-top: 18px
+      +clr
+      img
+        display: inline-block
+        width: 100px
+        height: 100px
+        +border-radius(50%)
+        margin-right: 10px
+        vertical-align: middle
+      p
+        font-size: 14px
+        font-family: 'conv_pfdintextcondpro-light'
+        display: inline-block
+        width: 205px
+        vertical-align: middle
+
+.acquaintance
+  background: url(../img/acquaintance_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 1154px
+  padding-top: 70px
+  +clr
+  +box
+  .acquaintance_in
+    +clr
+    @extend %in
+  h2
+    font-size: 36px
+    color: #1e5078
+    +mcb
+    font-weight: normal
+    text-align: center
+    span
+      font-size: 60px
+      &.green
+        color: #5a960a
+  .acquaintance__top
+    +pfl
+    font-size: 18px
+    margin-top: 60px
+    margin-bottom: 50px
+  .acquaintance__left
+    float: left
+    width: 500px
+    padding-left: 20px
+    margin-top: 35px
+    h3
+      +mcb
+      font-size: 24px
+      text-transform: uppercase
+      color: #1e5078
+      font-weight: normal
+    .acquaintance__review
+      margin-top: 18px
+      +clr
+      img
+        display: inline-block
+        width: 100px
+        height: 100px
+        +border-radius(50%)
+        margin-right: 15px
+        vertical-align: middle
+        &.right
+          margin-right: 0
+          margin-left: 10px
+      p
+        font-size: 18px
+        font-family: 'conv_pfdintextcondpro-light'
+        display: inline-block
+        width: 365px
+        vertical-align: middle
+        line-height: 1.3em
+        margin-top: 0
+    p
+      margin-top: 15px
+      font-size: 14px
+      &.first
+        margin-top: 35px
+    .acquaintance__img
+      margin-left: -70px
+      margin-top: 12px
+  .acquaintance__right
+    width: 430px
+    float: right
+    +border-radius(8px)
+    +background-clip(padding-box)
+    +background-image(linear-gradient(to bottom, #09314f 0%, rgba(40,120,170,.8) 100%))
+    color: #ffffff
+    text-align: center
+    padding: 35px 40px 45px 40px
+    +box
+    h3
+      font-size: 24px
+      text-transform: uppercase
+      +mcb
+    h4
+      +mc
+      font-size: 24px
+    ul
+      text-align: left
+      li
+        margin-top: 12px
+        line-height: 1.2em
 
 .reviews
   +clr
