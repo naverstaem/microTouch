@@ -65,7 +65,7 @@ input::placeholder, textarea::placeholder { font-size: 16px; color: #5a5a5a; fon
 .frm { padding-top: 0; padding-bottom: 10px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 form { margin-top: 30px; position: relative; }
-form input { padding-left: 47px; width: 280px; height: 50px; display: block; margin: 10px auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 18px; color: #000; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; background: #fff; }
+form input { padding-left: 47px; width: 280px; height: 50px; display: block; margin: 10px auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 18px; color: #000; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; border: 2px solid #dbdbdb; background: #fff; }
 form input.name { background: #fff url(../img/name.png) no-repeat 9px 13px; }
 form input.phone { background: #fff url(../img/phone.png) no-repeat 9px 13px; }
 
@@ -303,7 +303,8 @@ header .header_in .header__right .award img, .bottom .header_in .header__right .
 .bottom .header_in--bottom .header__left--bottom .header__img--bottom .figure5--bottom { top: 220px; right: auto; left: 25px; }
 .bottom .header_in--bottom .header__left--bottom .header__img--bottom .figure6--bottom { top: 360px; right: auto; left: 250px; }
 
-footer { box-sizing: border-box; height: 90px; text-align: center; padding-top: 16px; }
-footer p { font-size: 16px; color: #787878; }
-footer p a { color: #be1e1e; }
-footer p a:hover { text-decoration: none; }
+footer { box-sizing: border-box; width: 1008px; text-align: center; padding-top: 30px; font-family: "roboto_condensedlight"; }
+footer p { font-size: 16px; color: #ffffff; }
+footer p:nth-child(3) { margin-top: 20px; }
+footer p a { color: #ffffff; text-decoration: none; }
+footer p a:hover { text-decoration: underline; }
