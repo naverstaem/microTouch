@@ -667,12 +667,118 @@ header
             background: url(../img/mln2.png) left top no-repeat
 
 
+.work
+  +clr
+
+  h2
+    font-size: 60px
+    font-weight: normal
+    text-align: center
+    text-transform: uppercase
+    margin: 50px 0 60px
+    line-height: .9em
+    font-family: 'roboto_condensedlight'
+  .work_in
+    @extend %in
+    width: 920px
+    .item
+      width: 200px
+      display: inline-block
+      position: relative
+      float: left
+      margin-right: 40px
+      +box
+      &:last-child
+        margin-right: 0
+      &:first-child
+        margin-top: -7px
+        &:before
+          background: none
+
+      &:nth-child(2)
+        margin-top: 5px
+      &:before
+        position: absolute
+        content: ""
+        background: url(../img/arrow.png)
+        width: 20px
+        height: 20px
+        bottom: 70px
+        left: -30px
+    .textblock
+      width: 200px
+      height: 160px
+      +border-radius(10px)
+      +background-clip(padding-box)
+      border: 2px solid #e5e5e5
+      text-align: center
+      padding-left: 10px
+      padding-right: 10px
+      display: table
+      +box
+      .tablecell
+        display: table-cell
+        vertical-align: middle
+    img
+      display: block
+      margin: 0 auto 20px
+    a
+      display: block
+      +border-radius(30px)
+      font-size: 18px
+      +single-text-shadow()
+      +background-clip(padding-box)
+      background: #f9db27
+      +box-shadow(inset 0 -3px 0 rgba(250,220,40,.5))
+      +background(linear-gradient(bottom, #f9db27 0%, #fff5af 100%))
+      text-align: center
+      text-decoration: none
+      width: 200px
+      height: 60px
+      padding-top: 17px
+      margin-top: 20px
+      margin-bottom: 40px
+      color: #1e1e1e
+      +box
+      &:hover
+        background: #fff5af
+        +background(linear-gradient(top, #f9db27 0%, #fff5af 100%))
+
+
 .bottom
-  height: 745px
+  height: 880px
   @extend header
+  background: url(../img/bottom_bg.jpg) center center no-repeat
+  +background-size(cover)
+
   padding-top: 35px
   .header_in--bottom
-    margin-top: 0px !important
+    margin-top: 0px
+    .header__right--bottom
+      margin-top: 25px
+    .header__top--bottom
+      left: 20px
+    .header__left--bottom
+      left: -155px
+      top: 130px
+      .header__img--bottom
+        .figure--bottom
+          display: inline-block
+          position: absolute
+
+        .figure7--bottom
+          top: 380px
+          left: auto
+          right: 80px
+        .figure5--bottom
+          top: 220px
+          right: auto
+          left: 25px
+        .figure6--bottom
+          top: 360px
+          right: auto
+          left: 250px
+
 
 footer
   box-sizing: border-box
