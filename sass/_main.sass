@@ -601,9 +601,71 @@ header
       &:hover
         background: lighten(#45bdff, 10%)
 
-.order
+.mln
+  +clr
+  .mln_in
+    @extend %in
+    +clr
+  h2
+    text-align: center
+    font-size: 46px
+    text-transform: uppercase
+    color: #282828
+    +mc
+    margin: 0
+    span
+      color: #ffffff
+      font-weight: bold
+      padding-top: 58px
+      width: 175px
+      height: 175px
+      display: inline-block
+      +border-radius(50%)
+      +background-clip(padding-box)
+      +box
+      +background-image(linear-gradient(30deg, #3b9fd1 0%, #1ddbd1 40.81%, #13638b 100%))
 
-.our
+
+  .russia
+    background: url(../img/russia.png) left center no-repeat
+    height: 400px
+    width: 1030px
+    margin-left: -60px
+    .text
+      +mc
+      float: right
+      width: 600px
+      margin-top: 15px
+      margin-right: -100px
+      h3
+
+        text-transform: uppercase
+        font-size: 24px
+        font-weight: normal
+        text-align: left
+
+      h4
+        font-weight: normal
+        text-align: left
+        font-size: 17px
+        margin-top: 20px
+        margin-bottom: 30px
+      ul
+        list-style: none
+        text-align: left
+        padding-left: 50px
+        li
+          display: block
+          width: 430px
+          height: 90px
+          padding-left: 80px
+          padding-right: 50px
+
+          &.mln1
+            background: url(../img/mln1.png) left top no-repeat
+          &.mln2
+            background: url(../img/mln2.png) left top no-repeat
+
 
 .bottom
   height: 745px
