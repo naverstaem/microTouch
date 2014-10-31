@@ -507,6 +507,8 @@ header
     @extend %in
     width: 1055px
     +clr
+  .row
+    margin-bottom: 30px
   .review__item
     position: relative
     display: inline-block
@@ -631,6 +633,26 @@ header
     height: 400px
     width: 1030px
     margin-left: -60px
+    position: relative
+    .moscow
+      position: absolute
+      top: 145px
+      left: 38px
+      +border-radius(2px 2px 0 0)
+      +background-clip(padding-box)
+      background: #ffbf37
+      font-size: 13px
+      color: #282828
+      font-family: 'conv_magistralc'
+      padding: 5px
+      &:after
+        content: ""
+        position: absolute
+        +s(moscow_arrow)
+        bottom: -5px
+        left: 50%
+        +transform(translate(-50%))
+
     .text
       +mc
       float: right
