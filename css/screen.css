@@ -176,7 +176,7 @@ header .header_in .header__right:after, .bottom .header_in .header__right:after 
 header .header_in .header__right .award, .bottom .header_in .header__right .award { position: absolute; top: -117px; right: -12px; z-index: 1; }
 header .header_in .header__right .award img, .bottom .header_in .header__right .award img { display: block; }
 
-.scrollMenu { position: fixed; z-index: 999; width: 100%; top: 0; left: 0; bottom: auto; display: none; height: 60px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: rgba(0, 0, 0, 0.8); }
+.scrollMenu { position: fixed; z-index: 999; width: 100%; top: 0; left: 0; bottom: auto; display: none; height: 60px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: rgba(255, 255, 255, 0.8); }
 .scrollMenu .top_in { padding-top: 20px; }
 .scrollMenu .top, .scrollMenu .scrollMenu { height: 0; }
 
