@@ -1,0 +1,822 @@
+// Normally mainpage styles 
+//+font('Conv_SegoePrintRegular', 'SegoePrintRegular')
+
+.top
+  background: transparent
+
+  +background-size(cover)
+  height: 94px
+  .top_in
+    @extend %in
+    width: 1040px
+    +clr
+    position: relative
+    padding-top: 45px
+
+  nav
+    float: left
+
+    ul
+      font-size: 22px
+      padding: 0
+      li
+        display: inline-block
+        float: left
+        margin-right: 19px
+        font-family: 'futuralightlight'
+        border-right: solid 1px
+        color: #1e1e1e
+        line-height: 1em
+        padding-right: 20px
+        &:last-child
+          border: none
+        a
+          text-decoration: none
+          color: inherit
+          border-bottom: none
+          &:hover
+            border-bottom: solid 1px
+          &.is-active
+            border-bottom: solid 1px
+
+  .top__right
+    float: right
+    margin-top: -13px
+  .top__after-phone
+    display: inline-block
+    margin-left: 3px
+  .top__phone
+    +clr
+    font-size: 30px
+    font-family: 'roboto_condensedlight'
+    line-height: 1em
+    font-weight: normal
+    display: inline-block
+    span
+      font-family: 'roboto_cnbold'
+      font-size: 30px
+  .nomenclature
+    color: #1e1e1e
+    font-size: 14px
+    font-family: 'roboto_condensedlight'
+
+
+
+header
+  background: url(../img/header_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 845px
+  position: relative
+  +box
+
+
+  .header_in
+    @extend %in
+    +clr
+    position: relative
+    .header__top
+      padding-top: 33px
+      position: absolute
+      text-align: center
+      left: 150px
+      h1
+        font-size: 28px
+        color: #5ab4dc
+        +mcb
+        line-height: 1em
+        text-transform: uppercase
+        text-align: center
+      h2
+        +mc
+        font-size: 22px
+        text-align: center
+        line-height: 1.2em
+
+    .header__left
+      position: absolute
+      width: 680px
+      z-index: 0
+      left: 100px
+      top: 415px
+      +clr
+      .header__img
+        position: relative
+        display: block
+        .dot1
+          position: absolute
+          top: 76px
+          left: 64px
+          width: 8px
+          height: 8px
+          z-index: 1
+          background: #ffffff
+          +border-radius(50%)
+          border: solid 1px rgb(229,229,229)
+          &:before
+            position: absolute
+            content: ""
+            top: 128px
+            left: -128px
+            height: 1px
+            width: 240px
+            background: #e5e5e5
+            +transform(rotate(95deg))
+        .dot2
+          top: 87px
+          left: 82px
+          &:before
+            +transform(rotate(-47deg))
+            top: -75px
+            left: -25px
+            width: 206px
+
+        .figure
+          position: absolute
+          z-index: 1
+          &:before
+            position: absolute
+            content: ''
+            z-index: -1
+          &.figure1
+            top: 110px
+            left: -225px
+            &:before
+              background: url(../img/fig1.png) no-repeat
+              width: 149px
+              height: 125px
+              top: -90px
+              left: 100px
+          &.figure2
+            top: 170px
+            left: -10px
+            &:before
+              background: url(../img/fig2.png) no-repeat
+              width: 81px
+              height: 102px
+              top: -78px
+              left: 55px
+          &.figure3
+            top: 280px
+            left: 105px
+            &:before
+              background: url(../img/fig3.png) no-repeat
+              width: 115px
+              height: 100px
+              top: -65px
+              left: 90px
+          &.figure4
+            top: 330px
+            left: 280px
+            &:before
+              background: url(../img/fig4.png) no-repeat
+              width: 108px
+              height: 124px
+              top: -107px
+              left: 72px
+          &.figure5
+            top: 250px
+            left: -135px
+            border-bottom: solid 1px rgb(229,229,229)
+            padding-bottom: 5px
+            &:before
+              background: url(../img/comb2.png) no-repeat
+              width: 120px
+              height: 130px
+              top: -2px
+              left: -117px
+          &.figure6
+            top: -135px
+            left: 230px
+            border-bottom: solid 1px rgb(229,229,229)
+            padding-bottom: 5px
+            &:before
+              background: url(../img/comb.png) no-repeat
+              width: 140px
+              height: 150px
+              top: -30px
+              left: -140px
+          &.figure7
+            top: -40px
+            left: 380px
+            &:before
+              background: url(../img/brush.png) no-repeat
+              width: 100px
+              height: 135px
+              top: 38px
+              left: -57px
+          .figure-h3
+            font-family: 'conv_pfdintextcondpro-regular'
+            color: #1e5078
+            text-transform: uppercase
+            font-weight: normal
+            font-size: 18px
+            margin-bottom: 5px
+            &.light
+              color: #ffffff
+          .figure-p
+            color: #1e1e1e
+            font-family: 'conv_pfdintextcondpro-light'
+            font-size: 18px
+            font-weight: normal
+            line-height: 1.1em
+            &.light
+              color: #ffffff
+
+
+
+
+    .header__right
+      position: relative
+      margin-top: 115px
+      float: right
+      z-index: 1
+      +clr
+      .award
+        position: absolute
+        top: -117px
+        right: -12px
+        z-index: 1
+        img
+          display: block
+
+.scrollMenu
+  //@extend header
+  @extend .top
+  .top_in
+    padding-top: 20px
+  position: fixed
+  z-index: 999
+  width: 100%
+  top: 0
+  left: 0
+  bottom: auto
+  display: none
+  height: 60px
+  +box
+  background: rgba(#fff, 0.8)
+  .top
+    height: 0
+
+.specs
+  +clr
+  margin-top: 130px
+  .specs_in
+    @extend %in
+    width: 1020px
+    +clr
+  .specs__left
+    float: left
+    width: 570px
+    padding-left: 20px
+  .specs__caption
+    position: relative
+    +border-radius(8px)
+    +background-clip(padding-box)
+    +background-image(linear-gradient(to left, #09314f 0%, #2777a9 100%))
+    text-align: center
+    padding: 20px 0
+    &:after
+      position: absolute
+      content: ""
+      +s(specs-caption_arrow)
+      bottom: -18px
+      left: 50%
+      +transform(translateX(-50%))
+    h2
+      +mcb
+      font-size: 40px
+      color: #ffffff
+      line-height: 1em
+    h3
+      font-size: 24px
+      color: #ffffff
+      font-weight: normal
+      font-family: 'conv_pfdintextcondpro-bold'
+      line-height: 1em
+  .specs__items
+    text-align: center
+    margin-top: 66px
+    .row
+      display: inline-block
+      position: relative
+      margin-bottom: 35px
+  .specs__item
+    display: inline-block
+    width: 120px
+    vertical-align: top
+    margin: 0 32px
+    .item__img
+      width: 100px
+      height: 100px
+      margin-bottom: 10px
+      display: inline-block
+      img
+        display: block
+        width: 100%
+        +border-radius(50%)
+    p
+      +pfl
+      font-size: 16px
+      span
+        font-family: 'conv_pfdintextcondpro-bold'
+  .specs__right
+    float: right
+    +clr
+    margin-top: -50px
+    width: 340px
+    .specs__video
+      position: relative
+      img
+        display: block
+      &:before
+        position: absolute
+        content: ""
+        top: 0
+        left: 0
+        background: url(../img/video-border.png) no-repeat
+        width: 340px
+        height: 230px
+      &:after
+        position: absolute
+        content: ""
+        +s(play)
+        top: 50%
+        left: 50%
+        +transform(translate(-50%,-50%))
+      &:hover
+        +opacity(.9)
+      .adv
+        position: absolute
+        background: url(../img/adv_bg.png) no-repeat
+        width: 121px
+        height: 111px
+        top: -25px
+        left: -55px
+        +pfl
+        font-size: 16px
+        text-align: center
+        line-height: 1em
+        color: #ffffff
+        padding-top: 17px
+        p
+          font-size: 48px
+          font-family: 'conv_pfdintextcondpro-bold'
+          margin-top: 14px
+    .specs__complect
+      padding-left: 20px
+      margin-top: 25px
+      h3
+        +mc
+        font-size: 24px
+        text-transform: uppercase
+      ul
+        margin: 8px 0
+        li
+          position: relative
+          margin-left: 16px
+          &:before
+            position: absolute
+            content: ""
+            +s(check_ico)
+            top: 7px
+            left: -16px
+      h4
+        font-family: 'conv_pfdintextcondpro-italic'
+        font-size: 16px
+        color: #5a960a
+        font-weight: normal
+    .specs__review
+      margin-top: 18px
+      +clr
+      img
+        display: inline-block
+        width: 100px
+        height: 100px
+        +border-radius(50%)
+        margin-right: 10px
+        vertical-align: middle
+      p
+        font-size: 14px
+        font-family: 'conv_pfdintextcondpro-light'
+        display: inline-block
+        width: 205px
+        vertical-align: middle
+
+.acquaintance
+  background: url(../img/acquaintance_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 1154px
+  padding-top: 70px
+  +clr
+  +box
+  .acquaintance_in
+    +clr
+    @extend %in
+  h2
+    font-size: 36px
+    color: #1e5078
+    +mcb
+    font-weight: normal
+    text-align: center
+    span
+      font-size: 60px
+      &.green
+        color: #5a960a
+  .acquaintance__top
+    +pfl
+    font-size: 18px
+    margin-top: 60px
+    margin-bottom: 50px
+  .acquaintance__left
+    float: left
+    width: 500px
+    padding-left: 20px
+    margin-top: 35px
+    h3
+      +mcb
+      font-size: 24px
+      text-transform: uppercase
+      color: #1e5078
+      font-weight: normal
+    .acquaintance__review
+      margin-top: 18px
+      +clr
+      img
+        display: inline-block
+        width: 100px
+        height: 100px
+        +border-radius(50%)
+        margin-right: 15px
+        vertical-align: middle
+        &.right
+          margin-right: 0
+          margin-left: 10px
+      p
+        font-size: 18px
+        font-family: 'conv_pfdintextcondpro-light'
+        display: inline-block
+        width: 365px
+        vertical-align: middle
+        line-height: 1.3em
+        margin-top: 0
+    p
+      margin-top: 15px
+      font-size: 14px
+      &.first
+        margin-top: 35px
+    .acquaintance__img
+      margin-left: -70px
+      margin-top: 12px
+  .acquaintance__right
+    width: 430px
+    float: right
+    +border-radius(8px)
+    +background-clip(padding-box)
+    +background-image(linear-gradient(to bottom, #09314f 0%, rgba(40,120,170,.8) 100%))
+    color: #ffffff
+    text-align: center
+    padding: 35px 40px 45px 40px
+    +box
+    h3
+      font-size: 24px
+      text-transform: uppercase
+      +mcb
+    h4
+      +mc
+      font-size: 24px
+    ul
+      text-align: left
+      li
+        margin-top: 12px
+        line-height: 1.2em
+
+.reviews
+  +clr
+  padding-bottom: 80px
+  padding-top: 45px
+  clear: both
+
+  h2
+    margin-bottom: 35px
+    text-align: center
+    font-size: 36px
+    color: #1e5078
+    +mc
+    text-transform: uppercase
+  .reviews_in
+    @extend %in
+    width: 1055px
+    +clr
+  .row
+    margin-bottom: 30px
+  .review__item
+    position: relative
+    display: inline-block
+    margin-right: 41px
+    &.last
+      margin-right: 0
+    .review__person
+      margin-top: 15px
+      margin-left: -15px
+      i
+        display: inline-block
+        background: url(../img/name.png) center center no-repeat
+        width: 24px
+        height: 22px
+        margin-right: 12px
+        vertical-align: middle
+      h3
+        color: #5a960a
+        font-size: 18px
+        font-family: 'conv_pfdintextcondpro-light'
+        text-transform: none
+        font-weight: normal
+        display: inline-block
+        vertical-align: middle
+  .review__in
+    +background-clip(padding-box)
+    width: 320px
+
+    +border-radius(8px)
+    +background-clip(padding-box)
+    padding: 18px 24px
+    +box
+    +clr
+    background: transparent
+    border: rgb(210,230,240) solid 2px
+    +transform(skew(-15deg))
+
+    p
+      +pfl
+      color: #3c3c3c
+      font-size: 16px
+      +transform(skew(15deg))
+      margin-left: 10px
+
+  .review__buttons
+    clear: both
+    +clr
+    width: 460px
+    text-align: center
+    margin: 45px auto 0
+    %r-buttons
+      display: inline-block
+      width: 180px
+      height: 50px
+      +border-radius(4px)
+      +background-clip(padding-box)
+      color: #326414
+      font-size: 18px
+      text-decoration: none
+      +box
+      padding-top: 15px
+      text-transform: uppercase
+      font-family: 'conv_pfdintextcondpro-light'
+      +box-shadow(inset 0 -2px 0 rgba(70,130,10,.25))
+      +background-image(linear-gradient(to bottom, #e5ffc7 0%, #c7ff81 35.99%, #59bd09 100%))
+
+      &:hover
+        text-decoration: underline
+    .review__more-reviews
+      @extend %r-buttons
+      i
+        display: inline-block
+        +s(more-reviews_ico)
+        vertical-align: middle
+        position: relative
+        top: -3px
+        left: -12px
+      &:hover
+        +background-image(linear-gradient(to bottom, #59bd09 0%, #c7ff81 65.99%, #e5ffc7 100%))
+
+    .review__add-review
+      @extend %r-buttons
+      position: relative
+      top: -1px
+      padding-top: 14px
+      margin-left: 20px
+      color: #ffffff
+      border: none
+      +box-shadow(inset 0 -2px 0 rgba(60,160,210,.4))
+      +background-image(linear-gradient(to bottom, #45bdff 0%, #3b9fd1 100%))
+
+      &:hover
+        background: lighten(#45bdff, 10%)
+
+.mln
+  +clr
+  .mln_in
+    @extend %in
+    +clr
+  h2
+    text-align: center
+    font-size: 46px
+    text-transform: uppercase
+    color: #282828
+    +mc
+    margin: 0
+    span
+      color: #ffffff
+      font-weight: bold
+      padding-top: 58px
+      width: 175px
+      height: 175px
+      display: inline-block
+      +border-radius(50%)
+      +background-clip(padding-box)
+      +box
+      +background-image(linear-gradient(30deg, #3b9fd1 0%, #1ddbd1 40.81%, #13638b 100%))
+
+
+  .russia
+    background: url(../img/russia.png) left center no-repeat
+    height: 400px
+    width: 1030px
+    margin-left: -60px
+    position: relative
+    .moscow
+      position: absolute
+      top: 145px
+      left: 38px
+      +border-radius(2px 2px 0 0)
+      +background-clip(padding-box)
+      background: #ffbf37
+      font-size: 13px
+      color: #282828
+      font-family: 'conv_magistralc'
+      padding: 5px
+      &:after
+        content: ""
+        position: absolute
+        +s(moscow_arrow)
+        bottom: -5px
+        left: 50%
+        +transform(translate(-50%))
+
+    .text
+      +mc
+      float: right
+      width: 600px
+      margin-top: 15px
+      margin-right: -100px
+      h3
+
+        text-transform: uppercase
+        font-size: 24px
+        font-weight: normal
+        text-align: left
+
+      h4
+        font-weight: normal
+        text-align: left
+        font-size: 17px
+        margin-top: 20px
+        margin-bottom: 30px
+      ul
+        list-style: none
+        text-align: left
+        padding-left: 50px
+        li
+          display: block
+          width: 430px
+          height: 90px
+          padding-left: 80px
+          padding-right: 50px
+
+          &.mln1
+            background: url(../img/mln1.png) left top no-repeat
+          &.mln2
+            background: url(../img/mln2.png) left top no-repeat
+
+
+.work
+  +clr
+
+  h2
+    font-size: 60px
+    font-weight: normal
+    text-align: center
+    text-transform: uppercase
+    margin: 50px 0 60px
+    line-height: .9em
+    font-family: 'roboto_condensedlight'
+  .work_in
+    @extend %in
+    width: 920px
+    .item
+      width: 200px
+      display: inline-block
+      position: relative
+      float: left
+      margin-right: 40px
+      +box
+      &:last-child
+        margin-right: 0
+      &:first-child
+        margin-top: -7px
+        &:before
+          background: none
+
+      &:nth-child(2)
+        margin-top: 5px
+      &:before
+        position: absolute
+        content: ""
+        background: url(../img/arrow.png)
+        width: 20px
+        height: 20px
+        bottom: 70px
+        left: -30px
+    .textblock
+      width: 200px
+      height: 160px
+      +border-radius(10px)
+      +background-clip(padding-box)
+      border: 2px solid #e5e5e5
+      text-align: center
+      padding-left: 10px
+      padding-right: 10px
+      display: table
+      +box
+      .tablecell
+        display: table-cell
+        vertical-align: middle
+    img
+      display: block
+      margin: 0 auto 20px
+    a
+      display: block
+      +border-radius(30px)
+      font-size: 18px
+      +single-text-shadow()
+      +background-clip(padding-box)
+      background: #f9db27
+      +box-shadow(inset 0 -3px 0 rgba(250,220,40,.5))
+      +background(linear-gradient(bottom, #f9db27 0%, #fff5af 100%))
+      text-align: center
+      text-decoration: none
+      width: 200px
+      height: 60px
+      padding-top: 17px
+      margin-top: 20px
+      margin-bottom: 40px
+      color: #1e1e1e
+      +box
+      &:hover
+        background: #fff5af
+        +background(linear-gradient(top, #f9db27 0%, #fff5af 100%))
+
+
+.bottom
+  height: 880px
+  @extend header
+  background: url(../img/bottom_bg.jpg) center center no-repeat
+  +background-size(cover)
+
+  padding-top: 35px
+  .header_in--bottom
+    margin-top: 0px
+    .header__right--bottom
+      margin-top: 25px
+    .header__top--bottom
+      left: 20px
+    .header__left--bottom
+      left: -155px
+      top: 130px
+      .header__img--bottom
+        .figure--bottom
+          display: inline-block
+          position: absolute
+
+        .figure7--bottom
+          top: 380px
+          left: auto
+          right: 80px
+        .figure5--bottom
+          top: 220px
+          right: auto
+          left: 25px
+        .figure6--bottom
+          top: 360px
+          right: auto
+          left: 250px
+
+
+footer
+  box-sizing: border-box
+  @extend %in
+  width: 1008px
+  text-align: center
+  padding-top: 30px
+  font-family: 'roboto_condensedlight'
+  p
+    font-size: 16px
+    color: #ffffff
+    &:nth-child(3)
+      margin-top: 20px
+    a
+      color: #ffffff
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
