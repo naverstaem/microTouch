@@ -3,6 +3,9 @@ head.ready(function() {
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });
+
+    $(window).stellar();
+
    $(window).scroll(function () {
        if ( $(this).scrollTop() > 200) {
            $('.scrollMenu').slideDown();
